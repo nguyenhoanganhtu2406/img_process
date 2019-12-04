@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1114</width>
-    <height>648</height>
+    <width>1185</width>
+    <height>673</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -70,7 +70,7 @@
      <rect>
       <x>790</x>
       <y>50</y>
-      <width>301</width>
+      <width>361</width>
       <height>241</height>
      </rect>
     </property>
@@ -80,7 +80,7 @@
     <widget class="QDial" name="rotation_inp">
      <property name="geometry">
       <rect>
-       <x>80</x>
+       <x>130</x>
        <y>20</y>
        <width>50</width>
        <height>64</height>
@@ -93,7 +93,7 @@
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>20</x>
        <y>40</y>
        <width>47</width>
        <height>13</height>
@@ -109,7 +109,7 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>190</x>
        <y>40</y>
        <width>41</width>
        <height>20</height>
@@ -125,7 +125,7 @@
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>20</x>
        <y>90</y>
        <width>47</width>
        <height>16</height>
@@ -138,7 +138,7 @@
     <widget class="QSlider" name="scaling_inp">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>140</x>
        <y>90</y>
        <width>121</width>
        <height>22</height>
@@ -163,7 +163,7 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>280</x>
        <y>90</y>
        <width>41</width>
        <height>20</height>
@@ -182,7 +182,7 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>280</x>
        <y>140</y>
        <width>41</width>
        <height>20</height>
@@ -198,9 +198,9 @@
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>20</x>
        <y>120</y>
-       <width>61</width>
+       <width>81</width>
        <height>16</height>
       </rect>
      </property>
@@ -211,7 +211,7 @@
     <widget class="QSlider" name="tranY_inp">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>140</x>
        <y>170</y>
        <width>121</width>
        <height>22</height>
@@ -227,7 +227,7 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>280</x>
        <y>170</y>
        <width>41</width>
        <height>20</height>
@@ -243,7 +243,7 @@
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>50</x>
        <y>140</y>
        <width>16</width>
        <height>16</height>
@@ -256,7 +256,7 @@
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>50</x>
        <y>170</y>
        <width>16</width>
        <height>16</height>
@@ -269,7 +269,7 @@
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>20</x>
        <y>200</y>
        <width>61</width>
        <height>16</height>
@@ -282,7 +282,7 @@
     <widget class="QSlider" name="shear_inp">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>140</x>
        <y>200</y>
        <width>121</width>
        <height>22</height>
@@ -304,7 +304,7 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>280</x>
        <y>200</y>
        <width>41</width>
        <height>20</height>
@@ -320,7 +320,7 @@
     <widget class="QSlider" name="tranX_inp">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>140</x>
        <y>140</y>
        <width>121</width>
        <height>22</height>
@@ -339,8 +339,8 @@
      <rect>
       <x>790</x>
       <y>310</y>
-      <width>301</width>
-      <height>151</height>
+      <width>361</width>
+      <height>181</height>
      </rect>
     </property>
     <property name="title">
@@ -363,7 +363,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>80</y>
+       <y>90</y>
        <width>61</width>
        <height>21</height>
       </rect>
@@ -375,8 +375,8 @@
     <widget class="QSlider" name="median_inp">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>80</y>
+       <x>140</x>
+       <y>90</y>
        <width>121</width>
        <height>22</height>
       </rect>
@@ -406,8 +406,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>80</y>
+       <x>280</x>
+       <y>90</y>
        <width>41</width>
        <height>20</height>
       </rect>
@@ -423,7 +423,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>50</y>
+       <y>60</y>
        <width>61</width>
        <height>21</height>
       </rect>
@@ -435,8 +435,8 @@
     <widget class="QSlider" name="gaussian_inp">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>50</y>
+       <x>140</x>
+       <y>60</y>
        <width>121</width>
        <height>22</height>
       </rect>
@@ -466,8 +466,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>50</y>
+       <x>280</x>
+       <y>60</y>
        <width>41</width>
        <height>20</height>
       </rect>
@@ -485,8 +485,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>20</y>
+       <x>280</x>
+       <y>30</y>
        <width>41</width>
        <height>20</height>
       </rect>
@@ -502,7 +502,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>30</y>
        <width>61</width>
        <height>21</height>
       </rect>
@@ -514,8 +514,8 @@
     <widget class="QSlider" name="blur_inp">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>20</y>
+       <x>140</x>
+       <y>30</y>
        <width>121</width>
        <height>22</height>
       </rect>
@@ -527,7 +527,7 @@
       <number>13</number>
      </property>
      <property name="singleStep">
-      <number>1</number>
+      <number>2</number>
      </property>
      <property name="value">
       <number>1</number>
@@ -545,8 +545,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>110</y>
+       <x>280</x>
+       <y>120</y>
        <width>41</width>
        <height>20</height>
       </rect>
@@ -562,7 +562,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>110</y>
+       <y>120</y>
        <width>61</width>
        <height>21</height>
       </rect>
@@ -574,8 +574,8 @@
     <widget class="QSlider" name="bila_inp">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>110</y>
+       <x>140</x>
+       <y>120</y>
        <width>121</width>
        <height>22</height>
       </rect>
@@ -599,6 +599,63 @@
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
+    <widget class="QLineEdit" name="med_thresh_val">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>150</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>150</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Median threshold</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="med_thresh_inp">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>150</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>13</number>
+     </property>
+     <property name="singleStep">
+      <number>2</number>
+     </property>
+     <property name="value">
+      <number>1</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="gray_group">
     <property name="enabled">
@@ -607,9 +664,9 @@
     <property name="geometry">
      <rect>
       <x>790</x>
-      <y>480</y>
-      <width>301</width>
-      <height>111</height>
+      <y>500</y>
+      <width>361</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="title">
@@ -621,7 +678,7 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>280</x>
        <y>30</y>
        <width>41</width>
        <height>20</height>
@@ -637,7 +694,7 @@
     <widget class="QSlider" name="log_inp">
      <property name="geometry">
       <rect>
-       <x>80</x>
+       <x>130</x>
        <y>30</y>
        <width>141</width>
        <height>22</height>
@@ -665,7 +722,7 @@
     <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>20</x>
        <y>30</y>
        <width>31</width>
        <height>21</height>
@@ -681,7 +738,7 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>280</x>
        <y>60</y>
        <width>41</width>
        <height>20</height>
@@ -697,7 +754,7 @@
     <widget class="QSlider" name="gamma_inp">
      <property name="geometry">
       <rect>
-       <x>80</x>
+       <x>130</x>
        <y>60</y>
        <width>141</width>
        <height>22</height>
@@ -755,7 +812,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1114</width>
+     <width>1185</width>
      <height>20</height>
     </rect>
    </property>

@@ -93,6 +93,19 @@ class ImageProcessing:
         uniform_n_img = np.add(uniform_n, np.float32(self.img))
         return uniform_n_img
 
+    def med_thresh(self, thresh):
+        img = cv.cvtColor(self.img, cv.COLOR_BGR2GRAY)
+        h, w = img.shape[:2]
+        new_img = cv.medianBlur(img, 5)
+        img = np.array(img, np.float32)
+        new_img = np.array(new_img, np.float32)
+        for i in range(h):
+            for j in range(w):
+                if abs(img[i, j] - new_img[i, j]) <= thresh:
+                    new_img[i, j] = img[i, j]
+        new_img = np.uint8(new_img)
+        return new_img
+
     def cartoon(self):
         img_rgb = self.img
         numDownSamples = 2

@@ -53,6 +53,9 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.gaussian_inp.valueChanged.connect(self.gaussian)
         self.blur_inp.valueChanged.connect(self.blur)
 
+        #median threshold
+        self.med_thresh_inp.valueChanged.connect(self.med_thresh)
+
 
     def save_img(self):
         img = self.curImg
@@ -62,14 +65,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         for i in range(len(s) - 1, 0, -1):
             if s[i] == '/':
                 photoName = s[i + 1:len(s) - 4]
-                photoName = photoName + "_Changed" + s[len(s) - 4:]
+                photoName = photoName + "_processed" + s[len(s) - 4:]
                 break
 
         q = QMessageBox.question(self, "Confirmation", "Save current image?", QMessageBox.Yes | QMessageBox.No,
                                  QMessageBox.No)
         if (q == QMessageBox.Yes):
             cv.imwrite(photoName, img)
-            QMessageBox.about(self, "Alert", "Saved successfully")
+            QMessageBox.about(self, "Alert", "Saved successfully in this app directory")
 
     def open_image(self):
         self.filename = QFileDialog.getOpenFileName(self, "Choose Image", "", 
@@ -187,9 +190,15 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.bind_to_label(res)
 
     def median(self, n):
-        self.median_val.setText(str(n*2-1))
+        self.median_val.setText(str(n * 2 - 1))
         size = int(self.median_val.text())
         res = self.ip.median(size)
+        self.bind_to_label(res)
+
+    def med_thresh(self, thresh):
+        self.med_thresh_val.setText(str(thresh))
+        size = int(self.med_thresh_val.text())
+        res = self.ip.med_thresh(thresh)
         self.bind_to_label(res)
 
     def bilateral(self, sigma):
@@ -220,16 +229,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         res=self.ip.cartoon()
         self.bind_to_label(res)
 
-    
     def gauss_hp(self):
         res=self.ip.gaussian_hp()
         self.bind_to_label(res)
 
-    def canny(self):
-        res=self.ip.canny()
-        self.bind_to_label(res)
-
-    #chương 8
+    #edge
     def sobelx(self):
         res = self.ip.sobelX()
         self.bind_to_label(res)
@@ -238,6 +242,9 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.bind_to_label(res)
     def laplacian(self):
         res = self.ip.laplacian()
+        self.bind_to_label(res)
+    def canny(self):
+        res=self.ip.canny()
         self.bind_to_label(res)
 
     #trigger action on toolbar
