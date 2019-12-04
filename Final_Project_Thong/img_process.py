@@ -11,27 +11,26 @@ class ImageProcessing:
         self.img = cv.imread(file_img)
         self.img = cv.resize(self.img, (w, h))
 
-    def scaling(self, size):
-        return cv.resize(self.img, None, size*0.01, size*0.01, interpolation=cv.INTER_CUBIC)
+    def tiLe(self, size):
+        return cv.resize(self.img, dsize=None, fx=size*0.01, fy=size*0.01, interpolation=cv.INTER_CUBIC)
 
-    def translation(self,x,y):
+    def tinhTien(self,x,y):
         rows, cols, chs =self.img.shape
         M=np.float32([[1,0,x],[0,1,y]])
         return cv.warpAffine(self.img,M,(cols,rows))
 
-    def rotation(self, angle):
+    def gocQuay(self, goc):
         rows, cols, chs = self.img.shape
-        M = cv.getRotationMatrix2D((cols / 2, rows / 2), 360 - angle, 1)
+        M = cv.getRotationMatrix2D((cols / 2, rows / 2), 360 - goc, 1)
         return cv.warpAffine(self.img, M, (cols, rows))
 
-    def shearing(self, m):
+    def bienDang(self, m):
         rows, cols, chs = self.img.shape
         pts1 = np.float32([[50,m],[200,50],[50,200]])
         pts2 = np.float32([[10,100],[200,50],[100,250]])
         M = cv.getAffineTransform(pts1,pts2)
         return cv.warpAffine(self.img,M,(cols,rows))
 
-    #chapter 3
     def negative(self):
         res = ~self.img
         return res
@@ -54,15 +53,13 @@ class ImageProcessing:
         res = cv.LUT(self.img, table)
         return res
 
-    def adapt_histogram(self):
-        # create a CLAHE object (Arguments are optional).
+    def adaptHistogram(self):
         clahe = cv.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
         img_yuv = cv.cvtColor(self.img, cv.COLOR_RGB2YUV)
         img_yuv[:, :, 0] = clahe.apply(img_yuv[:, :, 0])
         res = cv.cvtColor(img_yuv, cv.COLOR_YUV2RGB)
         return res
 
-    #chapter 4
     def blur(self, n):
         res = cv.blur(self.img, (n,n))
         return res
@@ -75,21 +72,19 @@ class ImageProcessing:
         res = cv.medianBlur(self.img, n)
         return res
 
-    def cartooning(self):
+    def hoatHinh(self):
         gray = cv.cvtColor(self.img, cv.COLOR_BGR2GRAY)
         gray = cv.medianBlur(gray, 5)
         edges = cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY, 9, 9)
 
-        # 2) Color
         color = cv.bilateralFilter(self.img, 9, 300, 300)
 
-        # 3) Cartoon
         cartoon = cv.bitwise_and(color, color, mask=edges)
+        return cartoon
 
     def bilateral(self, sigma):
         return cv.bilateralFilter(self.img,9,sigma,sigma)
 
-    #chapter 5
     def butterworth_filter_lp(self, sx, sy, d0=40, n=1):
         hr = sx/2
         hc = sy/2
@@ -136,7 +131,7 @@ class ImageProcessing:
         Im = np.abs(np.fft.ifft2(np.fft.ifftshift(Ip)))
         return np.uint8(Im)
 
-    def gaussian_hp(self):
+    def highPassGaussian(self):
         data = np.array(self.img, dtype=np.float32)
         lowpass = ndimage.gaussian_filter(data, 3)
         gauss_highpass = data - lowpass
@@ -144,7 +139,6 @@ class ImageProcessing:
         gauss_highpass = ~gauss_highpass
         return gauss_highpass
     
-    #chapter 8
     def sobelX(self):
         return cv.Sobel(self.img, cv.CV_8U, 1, 0, ksize=7)
 
